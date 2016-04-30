@@ -1,6 +1,10 @@
 FROM ubuntu:14.04
 
-RUN apt-get update && apt-get install -y firefox
+MAINTAINER Marco Zocca, zocca.marco gmail
+
+RUN apt-get update 
+
+RUN apt-get install -y firefox
 
 # Replace 1000 with your user / group id
 RUN export uid=1000 gid=1000 && \
