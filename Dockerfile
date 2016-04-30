@@ -2,6 +2,9 @@ FROM ubuntu:14.04
 
 MAINTAINER Marco Zocca, zocca.marco gmail
 
+#DNS update: This is needed to run yum and to let the docker build process access the internet. 
+RUN "sh" "-c" "echo nameserver 8.8.8.8 >> /etc/resolv.conf"
+
 RUN apt-get update 
 
 RUN apt-get install -y firefox
